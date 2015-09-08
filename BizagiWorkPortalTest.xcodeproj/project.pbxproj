@@ -24,6 +24,8 @@
 		10A93B211B98067A00C791E7 /* InboxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A93B201B98067A00C791E7 /* InboxCell.m */; };
 		10A93B231B98068600C791E7 /* InboxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A93B221B98068600C791E7 /* InboxCell.xib */; };
 		85E73D33194C8CBED5C70062 /* libPods-BizagiWorkPortalTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF924B1E8FDAC9BD6FA329E2 /* libPods-BizagiWorkPortalTest.a */; };
+		F280CDF61B9F3C0A0027FA04 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CDF31B9F3C0A0027FA04 /* Client.m */; };
+		F280CDF71B9F3C0A0027FA04 /* Connections.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CDF51B9F3C0A0027FA04 /* Connections.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		10A93B221B98068600C791E7 /* InboxCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InboxCell.xib; sourceTree = "<group>"; };
 		1E7BAB982E11DA430FDD4B75 /* Pods-BizagiWorkPortalTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BizagiWorkPortalTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-BizagiWorkPortalTest/Pods-BizagiWorkPortalTest.release.xcconfig"; sourceTree = "<group>"; };
 		916D11A61A254F5D0AD641D9 /* Pods-BizagiWorkPortalTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BizagiWorkPortalTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BizagiWorkPortalTest/Pods-BizagiWorkPortalTest.debug.xcconfig"; sourceTree = "<group>"; };
+		F280CDF21B9F3C0A0027FA04 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = SupportingClasses/Client.h; sourceTree = "<group>"; };
+		F280CDF31B9F3C0A0027FA04 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Client.m; path = SupportingClasses/Client.m; sourceTree = "<group>"; };
+		F280CDF41B9F3C0A0027FA04 /* Connections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connections.h; path = SupportingClasses/Connections.h; sourceTree = "<group>"; };
+		F280CDF51B9F3C0A0027FA04 /* Connections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connections.m; path = SupportingClasses/Connections.m; sourceTree = "<group>"; };
 		FF924B1E8FDAC9BD6FA329E2 /* libPods-BizagiWorkPortalTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BizagiWorkPortalTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +115,7 @@
 		1036D7421B97F9C6003926FB /* BizagiWorkPortalTest */ = {
 			isa = PBXGroup;
 			children = (
+				F280CDF11B9F3C020027FA04 /* Connections */,
 				10A93B1E1B98065E00C791E7 /* Cells */,
 				10A93B1A1B9803F800C791E7 /* Objects */,
 				10A93B141B97FD4600C791E7 /* Resources */,
@@ -198,6 +205,17 @@
 				FF924B1E8FDAC9BD6FA329E2 /* libPods-BizagiWorkPortalTest.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F280CDF11B9F3C020027FA04 /* Connections */ = {
+			isa = PBXGroup;
+			children = (
+				F280CDF21B9F3C0A0027FA04 /* Client.h */,
+				F280CDF31B9F3C0A0027FA04 /* Client.m */,
+				F280CDF41B9F3C0A0027FA04 /* Connections.h */,
+				F280CDF51B9F3C0A0027FA04 /* Connections.m */,
+			);
+			name = Connections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +360,8 @@
 			files = (
 				1036D7491B97F9C6003926FB /* AppDelegate.m in Sources */,
 				1036D74C1B97F9C6003926FB /* BizagiWorkPortalTest.xcdatamodeld in Sources */,
+				F280CDF71B9F3C0A0027FA04 /* Connections.m in Sources */,
+				F280CDF61B9F3C0A0027FA04 /* Client.m in Sources */,
 				10A93B191B98013A00C791E7 /* InboxViewController.m in Sources */,
 				10A93B1D1B98042200C791E7 /* Process.m in Sources */,
 				1036D74F1B97F9C6003926FB /* ViewController.m in Sources */,

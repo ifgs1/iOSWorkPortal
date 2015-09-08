@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-BizagiWorkPortalTest-AFNetworking.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-BizagiWorkPortalTest-BButton.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-BizagiWorkPortalTest-SDWebImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods-BizagiWorkPortalTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>102E877D20737478423082FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>729E324C025623D2707F5427</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AF3BE07C551F15E05213B0E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD257CC45B9E42B401FD8268</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

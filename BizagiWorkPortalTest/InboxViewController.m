@@ -11,6 +11,7 @@
 #import "InboxCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 @interface InboxViewController ()
+@property (nonatomic, strong) Connections *APIConnection;
 
 @end
 
@@ -19,53 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.APIConnection = [[Connections alloc] init];
+
     [self loadInbox];
 }
 -(void)loadInbox{
+    self.APIConnection.delegate = self;
     self.listInbox = [[NSMutableArray alloc]init];
-    NSURL *URL = [NSURL URLWithString:@"http://private-2d854-bizagi.apiary-mock.com/ivan"];
-    
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-    [request setHTTPMethod:@"GET"];
-    
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
-                                            completionHandler:
-                                  ^(NSData *data, NSURLResponse *response, NSError *error) {
-                                      
-                                      if (error) {
-                                          // Handle error...
-                                          return;
-                                      }
-                                      
-                                      if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-                                          NSLog(@"Response HTTP Status code: %ld\n", (long)[(NSHTTPURLResponse *)response statusCode]);
-                                          NSLog(@"Response HTTP Headers:\n%@\n", [(NSHTTPURLResponse *)response allHeaderFields]);
-                                      }
-                                      NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data
-                                                                                           options:kNilOptions
-                                                                                             error:&error];
-                                      
-                                      for (NSDictionary * inbox in json) {
-                                          Process * process = [[Process alloc]init];
-                                          process.activity = [inbox objectForKey:@"activity"];
-                                          process.activityId = [inbox objectForKey:@"activityId"];
-                                          process.beginDate = [inbox objectForKey:@"beginDate"];
-                                          process.employee = [inbox objectForKey:@"employee"];
-                                          process.endDate = [inbox objectForKey:@"endDate"];
-                                          process.image = [inbox objectForKey:@"image"];
-                                          process.lastVacationOn = [inbox objectForKey:@"lastVacationOn"];
-                                          process.process = [inbox objectForKey:@"process"];
-                                          process.processId = [inbox objectForKey:@"processId"];
-                                          [self.listInbox addObject:process];
-                                      }
-                                      [self.tableViewInbox reloadData];
-                                  }];
-    [task resume];
-
-    
-    
+    [self.APIConnection getInbox];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -97,9 +59,9 @@
 
     Process * process = [self.listInbox objectAtIndex:indexPath.row];
     
-    cell.lblEmployee.text = process.employee;
+    cell.lblEmployee.text = [NSString stringWithFormat:@"Employee: %@",process.employee];
     cell.lblDaysRequested.text=process.resquestDate;
-    cell.lblToDates.text = process.endDate;
+    cell.lblToDates.text = [NSString stringWithFormat:@"Number of Days: %@",process.days];
     
     [cell.imgEmployee  sd_setImageWithURL:[NSURL URLWithString:process.image]
                         placeholderImage:[UIImage imageNamed:@"placeholderimage.jpg"]];
@@ -124,6 +86,27 @@
     
     
 }
+-(void)getInboxDidFinishSuccessfully:(NSDictionary*)responseObject{
+    
+    for (NSDictionary * inbox in responseObject) {
+        Process * process = [[Process alloc]init];
+        process.activity = [inbox objectForKey:@"activity"];
+        process.activityId = [inbox objectForKey:@"activityId"];
+        process.beginDate = [inbox objectForKey:@"beginDate"];
+        process.employee = [inbox objectForKey:@"employee"];
+        process.endDate = [inbox objectForKey:@"endDate"];
+        process.image = [inbox objectForKey:@"image"];
+        process.lastVacationOn = [inbox objectForKey:@"lastVacationOn"];
+        process.process = [inbox objectForKey:@"process"];
+        process.processId = [inbox objectForKey:@"processId"];
+        process.days = [inbox objectForKey:@"vacationDays"];
+        [self.listInbox addObject:process];
+    }
+    [self.tableViewInbox reloadData];
+}
+-(void)getInboxDidFinishWithFailure:(NSDictionary*)responseObject{
 
+
+}
 
 @end

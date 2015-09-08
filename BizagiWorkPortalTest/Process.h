@@ -20,5 +20,7 @@
 @property (strong,nonatomic) NSString *processId;
 @property (strong,nonatomic) NSString *resquestDate;
 @property (strong,nonatomic) NSString *process;
+@property (strong,nonatomic) NSString *days;
+
 
 @end

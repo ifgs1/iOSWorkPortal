@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface InboxViewController : UIViewController
+#import "Connections.h"
+@interface InboxViewController : UIViewController<ConnectionsDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableViewInbox;
 @property (strong, nonatomic)  NSMutableArray *listInbox;
 
