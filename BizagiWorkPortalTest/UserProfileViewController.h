@@ -14,6 +14,8 @@
 #import "UINavigationBar+FlatUI.h"
 #import "UIColor+FlatUI.h"
 #import "FUIButton.h"
+#import "SVProgressHUD.h"
+
 @interface UserProfileViewController : UIViewController<ConnectionsDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imgUser;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;

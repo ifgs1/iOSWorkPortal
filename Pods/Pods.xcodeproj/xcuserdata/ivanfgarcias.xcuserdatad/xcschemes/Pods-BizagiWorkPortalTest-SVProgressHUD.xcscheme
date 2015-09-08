@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F1EFE888CE8350737A1AE9EA"
-               BuildableName = "libPods-BizagiWorkPortalTest.a"
-               BlueprintName = "Pods-BizagiWorkPortalTest"
+               BlueprintIdentifier = "FFE4717A194CB095E15C3C5A"
+               BuildableName = "libPods-BizagiWorkPortalTest-SVProgressHUD.a"
+               BlueprintName = "Pods-BizagiWorkPortalTest-SVProgressHUD"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

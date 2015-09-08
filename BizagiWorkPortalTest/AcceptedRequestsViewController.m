@@ -36,6 +36,7 @@
     [self loadAcceptedRequests];
 }
 -(void)loadAcceptedRequests{
+    [SVProgressHUD show];
     self.APIConnection.delegate = self;
     self.listAccepted = [[NSMutableArray alloc]init];
     [self.APIConnection getApprovedUsers];
@@ -63,9 +64,12 @@
         [self.listAccepted addObject:process];
        }
     }
+    [SVProgressHUD dismiss];
+
     [self.tableviewAcceptedRequests reloadData];
 }
 -(void)getApprovedDidFinishWithFailure:(NSDictionary*)responseObject{
+    [SVProgressHUD dismiss];
 
 
 

@@ -14,6 +14,7 @@
 #import "UINavigationBar+FlatUI.h"
 #import "UIColor+FlatUI.h"
 #import "FUIButton.h"
+#import "SVProgressHUD.h"
 @interface InboxViewController : UIViewController<ConnectionsDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableViewInbox;
 @property (strong, nonatomic)  NSMutableArray *listInbox;

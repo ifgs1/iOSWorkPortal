@@ -37,6 +37,7 @@
 -(void)loadInbox{
     self.APIConnection.delegate = self;
     self.listInbox = [[NSMutableArray alloc]init];
+    [SVProgressHUD show];
     [self.APIConnection getInbox];
 }
 - (void)didReceiveMemoryWarning {
@@ -118,9 +119,12 @@
         process.resquestDate = [inbox objectForKey:@"requestDate"];
         [self.listInbox addObject:process];
     }
+    [SVProgressHUD dismiss];
+
     [self.tableViewInbox reloadData];
 }
 -(void)getInboxDidFinishWithFailure:(NSDictionary*)responseObject{
+    [SVProgressHUD dismiss];
 
 
 }

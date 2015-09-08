@@ -32,6 +32,7 @@
 -(void)loadUserProfile{
     
     self.APIConnection.delegate = self;
+    [SVProgressHUD show];
 
     [self.APIConnection getUserProfile];
 
@@ -55,12 +56,14 @@
     self.lblAge.text = [NSString stringWithFormat:@"Age : %@",[responseObject objectForKey:@"age"]];
 
     self.lblGender.text = [NSString stringWithFormat:@"Gender : %@",[responseObject objectForKey:@"gender"]];
+    [SVProgressHUD dismiss];
 
 
 
 }
 -(void)getUserProfileDidFinishWithFailure:(NSDictionary*)responseObject{
 
+    [SVProgressHUD dismiss];
 
 
 }

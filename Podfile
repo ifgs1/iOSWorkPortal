@@ -5,6 +5,7 @@ target 'BizagiWorkPortalTest' do
 pod 'AFNetworking'
 pod 'BButton'
 pod 'SDWebImage', '~>3.7'
+pod 'SVProgressHUD'
 end
 
 target 'BizagiWorkPortalTestTests' do

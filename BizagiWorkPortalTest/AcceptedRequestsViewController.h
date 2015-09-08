@@ -15,6 +15,8 @@
 #import "FUIButton.h"
 #import "Connections.h"
 #import "M13BadgeView.h"
+#import "SVProgressHUD.h"
+
 @interface AcceptedRequestsViewController : UIViewController<ConnectionsDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableviewAcceptedRequests;
 @property (strong, nonatomic)  NSMutableArray *listAccepted;
