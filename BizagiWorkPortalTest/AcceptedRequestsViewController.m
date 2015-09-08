@@ -16,7 +16,10 @@
 
 @end
 
-@implementation AcceptedRequestsViewController
+@implementation AcceptedRequestsViewController{
+    M13BadgeView *badgeView2;
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,6 +49,8 @@
 -(void)getApprovedDidFinishSuccessfully:(NSDictionary*)responseObject{
     NSLog(@"response %@",responseObject);
     for (NSDictionary * inbox in responseObject) {
+        if ([[inbox objectForKey:@"status"] isEqualToString:@"approved"]) {
+            
         Process * process = [[Process alloc]init];
         process.employee = [inbox objectForKey:@"employee"];
         process.endDate = [inbox objectForKey:@"endDate"];
@@ -56,6 +61,7 @@
         process.days = [inbox objectForKey:@"daysApproved"];
         process.resquestDate = [inbox objectForKey:@"requestDate"];
         [self.listAccepted addObject:process];
+       }
     }
     [self.tableviewAcceptedRequests reloadData];
 }
@@ -99,6 +105,18 @@
     cell.imgEmployee.layer.borderWidth=1.0;
     cell.imgEmployee.layer.masksToBounds = YES;
     cell.imgEmployee.layer.borderColor=[[UIColor lightGrayColor] CGColor];
+    NSString * stringBadge = [NSString stringWithFormat:@"%@",process.days];
+
+    badgeView2 = [[M13BadgeView alloc] initWithFrame:CGRectMake(200, 0, 20.0, 20.0)];
+    badgeView2.shadowBorder = NO;
+    badgeView2.borderColor = [UIColor whiteColor];
+    badgeView2.badgeBackgroundColor=[UIColor redColor];
+    badgeView2.borderWidth = 1.0;
+    badgeView2.text = stringBadge;
+    badgeView2.verticalAlignment = M13BadgeViewVerticalAlignmentMiddle;
+    badgeView2.horizontalAlignment = M13BadgeViewHorizontalAlignmentRight;
+    [badgeView2 setHidesWhenZero:YES];
+    [cell addSubview:badgeView2];
     
     return cell;
 }

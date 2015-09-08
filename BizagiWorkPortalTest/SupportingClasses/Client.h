@@ -11,7 +11,7 @@
 
 @interface Client :AFHTTPSessionManager
 
-
+ 
 + (id)sharedInstance;
 - (instancetype)initWithBaseURL:(NSURL *)url;
 

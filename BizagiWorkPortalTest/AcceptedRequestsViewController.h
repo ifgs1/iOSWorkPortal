@@ -14,9 +14,11 @@
 #import "UIColor+FlatUI.h"
 #import "FUIButton.h"
 #import "Connections.h"
+#import "M13BadgeView.h"
 @interface AcceptedRequestsViewController : UIViewController<ConnectionsDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableviewAcceptedRequests;
 @property (strong, nonatomic)  NSMutableArray *listAccepted;
 
+@property (nonatomic, retain) M13BadgeView *badgeViewCell;
 
 @end

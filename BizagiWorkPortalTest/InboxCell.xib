@@ -18,7 +18,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FJ-Ar-2L7">
-                    <rect key="frame" x="108" y="8" width="263" height="21"/>
+                    <rect key="frame" x="108" y="8" width="319" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -30,7 +30,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hY-JL-tZD">
-                    <rect key="frame" x="108" y="51" width="263" height="21"/>
+                    <rect key="frame" x="108" y="51" width="319" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -43,14 +43,15 @@
                 <constraint firstItem="2ds-cH-TRs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="IXd-7u-q2w"/>
                 <constraint firstItem="HSd-6Y-Pmz" firstAttribute="leading" secondItem="7hY-JL-tZD" secondAttribute="leading" id="Q9v-zT-4LY"/>
                 <constraint firstItem="HSd-6Y-Pmz" firstAttribute="leading" secondItem="6FJ-Ar-2L7" secondAttribute="leading" id="Tnf-Ha-QKi"/>
-                <constraint firstItem="7hY-JL-tZD" firstAttribute="trailing" secondItem="HSd-6Y-Pmz" secondAttribute="trailing" id="UWU-LT-Z3i"/>
-                <constraint firstItem="HSd-6Y-Pmz" firstAttribute="trailing" secondItem="6FJ-Ar-2L7" secondAttribute="trailing" id="YGy-JU-Y97"/>
+                <constraint firstItem="7hY-JL-tZD" firstAttribute="trailing" secondItem="HSd-6Y-Pmz" secondAttribute="trailing" constant="56" id="UWU-LT-Z3i"/>
+                <constraint firstItem="HSd-6Y-Pmz" firstAttribute="trailing" secondItem="6FJ-Ar-2L7" secondAttribute="trailing" constant="-56" id="YGy-JU-Y97"/>
                 <constraint firstItem="HSd-6Y-Pmz" firstAttribute="centerY" secondItem="2ds-cH-TRs" secondAttribute="centerY" id="e7n-tE-t78"/>
                 <constraint firstItem="6FJ-Ar-2L7" firstAttribute="leading" secondItem="2ds-cH-TRs" secondAttribute="trailing" constant="19" id="iUt-UN-bd3"/>
-                <constraint firstAttribute="trailing" secondItem="6FJ-Ar-2L7" secondAttribute="trailing" constant="64" id="lRY-jb-wF2"/>
+                <constraint firstAttribute="trailing" secondItem="6FJ-Ar-2L7" secondAttribute="trailing" constant="8" id="lRY-jb-wF2"/>
                 <constraint firstItem="2ds-cH-TRs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="mrh-cI-9dS"/>
                 <constraint firstItem="2ds-cH-TRs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zpg-qR-W3v"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="imgEmployee" destination="2ds-cH-TRs" id="J9e-fo-lEQ"/>

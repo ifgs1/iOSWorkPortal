@@ -39,6 +39,7 @@
 		F280CE181B9F59EE0027FA04 /* UIFont+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CE0D1B9F59EE0027FA04 /* UIFont+FlatUI.m */; };
 		F280CE191B9F59EE0027FA04 /* UIImage+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CE0F1B9F59EE0027FA04 /* UIImage+FlatUI.m */; };
 		F280CE1A1B9F59EE0027FA04 /* UINavigationBar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CE111B9F59EE0027FA04 /* UINavigationBar+FlatUI.m */; };
+		F280CE1E1B9F62CE0027FA04 /* M13BadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CE1D1B9F62CE0027FA04 /* M13BadgeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,8 @@
 		F280CE0F1B9F59EE0027FA04 /* UIImage+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+FlatUI.m"; path = "SupportingClasses/Design/UIImage+FlatUI.m"; sourceTree = "<group>"; };
 		F280CE101B9F59EE0027FA04 /* UINavigationBar+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+FlatUI.h"; path = "SupportingClasses/Design/UINavigationBar+FlatUI.h"; sourceTree = "<group>"; };
 		F280CE111B9F59EE0027FA04 /* UINavigationBar+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+FlatUI.m"; path = "SupportingClasses/Design/UINavigationBar+FlatUI.m"; sourceTree = "<group>"; };
+		F280CE1C1B9F62CE0027FA04 /* M13BadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13BadgeView.h; path = SupportingClasses/Badge/M13BadgeView.h; sourceTree = "<group>"; };
+		F280CE1D1B9F62CE0027FA04 /* M13BadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13BadgeView.m; path = SupportingClasses/Badge/M13BadgeView.m; sourceTree = "<group>"; };
 		FF924B1E8FDAC9BD6FA329E2 /* libPods-BizagiWorkPortalTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BizagiWorkPortalTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -149,6 +152,7 @@
 		1036D7421B97F9C6003926FB /* BizagiWorkPortalTest */ = {
 			isa = PBXGroup;
 			children = (
+				F280CE1B1B9F62C20027FA04 /* Badge */,
 				F280CE031B9F59E60027FA04 /* Design */,
 				F280CDF11B9F3C020027FA04 /* Connections */,
 				10A93B1E1B98065E00C791E7 /* Cells */,
@@ -279,6 +283,15 @@
 				F280CE111B9F59EE0027FA04 /* UINavigationBar+FlatUI.m */,
 			);
 			name = Design;
+			sourceTree = "<group>";
+		};
+		F280CE1B1B9F62C20027FA04 /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				F280CE1C1B9F62CE0027FA04 /* M13BadgeView.h */,
+				F280CE1D1B9F62CE0027FA04 /* M13BadgeView.m */,
+			);
+			name = Badge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F280CE1E1B9F62CE0027FA04 /* M13BadgeView.m in Sources */,
 				F280CE1A1B9F59EE0027FA04 /* UINavigationBar+FlatUI.m in Sources */,
 				1036D7491B97F9C6003926FB /* AppDelegate.m in Sources */,
 				1036D74C1B97F9C6003926FB /* BizagiWorkPortalTest.xcdatamodeld in Sources */,
