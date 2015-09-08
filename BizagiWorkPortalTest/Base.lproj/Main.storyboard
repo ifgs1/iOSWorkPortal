@@ -44,8 +44,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Wxx-Ns-EUs">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Wxx-Ns-EUs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="hpH-5U-yjW" id="eGe-LW-Md2"/>
@@ -65,7 +65,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="tableViewInbox" destination="Wxx-Ns-EUs" id="UvI-OK-blj"/>
-                        <segue destination="Cwe-66-0OL" kind="push" identifier="detail" id="B4O-4h-vsA"/>
+                        <segue destination="Cwe-66-0OL" kind="show" identifier="detail" id="B4O-4h-vsA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgB-xE-b9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -185,10 +185,29 @@
                     <view key="view" contentMode="scaleToFill" id="Nom-2Z-EO2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JxU-gk-xFl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Kfz-5K-mbe" id="Htc-aV-9mR"/>
+                                    <outlet property="delegate" destination="Kfz-5K-mbe" id="EkA-m9-nId"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JxU-gk-xFl" firstAttribute="bottom" secondItem="Iy1-Si-F3v" secondAttribute="top" id="4Y8-2u-i39"/>
+                            <constraint firstItem="JxU-gk-xFl" firstAttribute="leading" secondItem="Nom-2Z-EO2" secondAttribute="leading" id="4xq-PE-oK1"/>
+                            <constraint firstItem="JxU-gk-xFl" firstAttribute="top" secondItem="Nom-2Z-EO2" secondAttribute="top" id="6L9-kf-0fp"/>
+                            <constraint firstAttribute="trailing" secondItem="JxU-gk-xFl" secondAttribute="trailing" id="XCW-VU-fMo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Ty-St-tKZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="tableviewAcceptedRequests" destination="JxU-gk-xFl" id="AZj-uM-DgP"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="2184" y="1961"/>
@@ -282,8 +301,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="rDG-eA-9ab" kind="relationship" relationship="viewControllers" id="t1d-GF-SQ5"/>
-                        <segue destination="kIe-cd-LOG" kind="relationship" relationship="viewControllers" id="XoX-Jk-Zfd"/>
                         <segue destination="xdK-2T-cNw" kind="relationship" relationship="viewControllers" id="YZL-6p-Z7d"/>
+                        <segue destination="kIe-cd-LOG" kind="relationship" relationship="viewControllers" id="XoX-Jk-Zfd"/>
                         <segue destination="ypQ-Gk-7co" kind="relationship" relationship="viewControllers" id="vt6-v6-Fmb"/>
                     </connections>
                 </tabBarController>
@@ -295,7 +314,7 @@
         <scene sceneID="DhN-Bl-Suf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xdK-2T-cNw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="inbox" selectedImage="inbox.png" id="khb-IA-R19"/>
+                    <tabBarItem key="tabBarItem" title="inbox" image="inbox.png" id="khb-IA-R19"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fxL-bE-tAA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -310,11 +329,11 @@
             </objects>
             <point key="canvasLocation" x="1214" y="315"/>
         </scene>
-        <!--Item 1-->
+        <!--Profile-->
         <scene sceneID="iGb-zt-fH5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rDG-eA-9ab" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Iiy-4W-d8i"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile.png" id="Iiy-4W-d8i"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aBs-by-bEM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -329,11 +348,11 @@
             </objects>
             <point key="canvasLocation" x="1566" y="1121"/>
         </scene>
-        <!--Item-->
+        <!--About-->
         <scene sceneID="8BQ-9t-9r9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ypQ-Gk-7co" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Akg-my-YzS"/>
+                    <tabBarItem key="tabBarItem" title="About" image="information.png" id="Akg-my-YzS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aCT-Bx-MUU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -348,11 +367,11 @@
             </objects>
             <point key="canvasLocation" x="1566" y="2820"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Accepted-->
         <scene sceneID="ZaC-mb-xDO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kIe-cd-LOG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="GDP-DP-dNp"/>
+                    <tabBarItem key="tabBarItem" title="Accepted" image="accepted.png" id="GDP-DP-dNp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wtb-NI-FBL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -369,7 +388,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="inbox.png" width="100" height="100"/>
+        <image name="accepted.png" width="20" height="20"/>
+        <image name="inbox.png" width="20" height="20"/>
+        <image name="information.png" width="20" height="20"/>
         <image name="office.jpg" width="1600" height="1067"/>
+        <image name="profile.png" width="20" height="20"/>
     </resources>
 </document>

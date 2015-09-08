@@ -7,8 +7,12 @@
 //
 
 #import "AcceptedRequestsViewController.h"
+#import "Process.h"
+#import "InboxCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface AcceptedRequestsViewController ()
+@property (nonatomic, strong) Connections *APIConnection;
 
 @end
 
@@ -17,6 +21,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"Accepted Requests";
+    self.APIConnection = [[Connections alloc] init];
+
+    
+    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18],
+                                                                    NSForegroundColorAttributeName: [UIColor colorFromHexCode:@"#ffffff"]};
+    
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor colorFromHexCode:@"#e75659"]];
+    
+    [self loadAcceptedRequests];
+}
+-(void)loadAcceptedRequests{
+    self.APIConnection.delegate = self;
+    self.listAccepted = [[NSMutableArray alloc]init];
+    [self.APIConnection getApprovedUsers];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +43,75 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)getApprovedDidFinishSuccessfully:(NSDictionary*)responseObject{
+    NSLog(@"response %@",responseObject);
+    for (NSDictionary * inbox in responseObject) {
+        Process * process = [[Process alloc]init];
+        process.employee = [inbox objectForKey:@"employee"];
+        process.endDate = [inbox objectForKey:@"endDate"];
+        process.image = [inbox objectForKey:@"image"];
+        process.beginDate = [inbox objectForKey:@"beginDate"];
+        process.process = [inbox objectForKey:@"status"];
+        process.processId = [inbox objectForKey:@"processId"];
+        process.days = [inbox objectForKey:@"daysApproved"];
+        process.resquestDate = [inbox objectForKey:@"requestDate"];
+        [self.listAccepted addObject:process];
+    }
+    [self.tableviewAcceptedRequests reloadData];
 }
-*/
+-(void)getApprovedDidFinishWithFailure:(NSDictionary*)responseObject{
+
+
+
+}
+
+#pragma mark - Table View
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+#pragma mark - TableView Datasource Methods
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.listAccepted.count;
+    
+}
+#pragma mark - TableView Delegate Methods
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *simpleTableIdentifier = @"InboxCell";
+    InboxCell *cell = (InboxCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"InboxCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    Process * process = [self.listAccepted objectAtIndex:indexPath.row];
+    
+    cell.lblEmployee.text = [NSString stringWithFormat:@"Employee: %@",process.employee];
+    cell.lblToDates.text = [NSString stringWithFormat:@"Number of Days: %@",process.days];
+    
+    [cell.imgEmployee  sd_setImageWithURL:[NSURL URLWithString:process.image]
+                         placeholderImage:[UIImage imageNamed:@"placeholderimage.jpg"]];
+    
+    cell.imgEmployee.layer.backgroundColor=[[UIColor clearColor] CGColor];
+    cell.imgEmployee.layer.cornerRadius=10;
+    cell.imgEmployee.layer.borderWidth=1.0;
+    cell.imgEmployee.layer.masksToBounds = YES;
+    cell.imgEmployee.layer.borderColor=[[UIColor lightGrayColor] CGColor];
+    
+    return cell;
+}
+
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+    
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
+}
 
 @end

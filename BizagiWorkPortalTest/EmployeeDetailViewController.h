@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Process.h"
 #import "BButton.h"
-
+//FlatUI
+#import "UIFont+FlatUI.h"
+#import "UIColor+FlatUI.h"
+#import "UINavigationBar+FlatUI.h"
+#import "UIColor+FlatUI.h"
+#import "FUIButton.h"
 @interface EmployeeDetailViewController : UIViewController
 
 @property (strong, nonatomic)Process *selectedProcess;

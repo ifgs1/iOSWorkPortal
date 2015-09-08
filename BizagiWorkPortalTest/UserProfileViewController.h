@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Connections.h"
-
+//FlatUI
+#import "UIFont+FlatUI.h"
+#import "UIColor+FlatUI.h"
+#import "UINavigationBar+FlatUI.h"
+#import "UIColor+FlatUI.h"
+#import "FUIButton.h"
 @interface UserProfileViewController : UIViewController<ConnectionsDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imgUser;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;

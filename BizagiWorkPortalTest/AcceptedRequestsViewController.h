@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+//FlatUI
+#import "UIFont+FlatUI.h"
+#import "UIColor+FlatUI.h"
+#import "UINavigationBar+FlatUI.h"
+#import "UIColor+FlatUI.h"
+#import "FUIButton.h"
+#import "Connections.h"
+@interface AcceptedRequestsViewController : UIViewController<ConnectionsDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableviewAcceptedRequests;
+@property (strong, nonatomic)  NSMutableArray *listAccepted;
 
-@interface AcceptedRequestsViewController : UIViewController
 
 @end

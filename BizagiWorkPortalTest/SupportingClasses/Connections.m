@@ -49,4 +49,22 @@ failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                          }];
 
 }
+-(void)getApprovedUsers{
+
+    [[Client sharedInstance] GET:@"/ivan3" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"The response to the approved request is: %@", responseObject);
+        
+        [self.delegate getApprovedDidFinishSuccessfully:responseObject];
+        
+        
+        
+    }
+                         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                             NSLog(@"error report %@",error);
+                             
+                             [self.delegate getApprovedDidFinishWithFailure:@{  @"operation": operation,
+                                                                             @"error": error}];
+                             
+                         }];
+}
 @end

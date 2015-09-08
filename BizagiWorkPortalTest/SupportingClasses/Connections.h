@@ -22,6 +22,8 @@
 -(void)getUserProfileDidFinishSuccessfully:(NSDictionary*)responseObject; //  UserProfileViewController
 -(void)getUserProfileDidFinishWithFailure:(NSDictionary*)responseObject; //  UserProfileViewController
 
+-(void)getApprovedDidFinishSuccessfully:(NSDictionary*)responseObject; //  inboxViewController
+-(void)getApprovedDidFinishWithFailure:(NSDictionary*)responseObject; //  inboxViewController
 
 @end
 
@@ -36,6 +38,7 @@
 
 -(void)getInbox;
 -(void)getUserProfile;
+-(void)getApprovedUsers;
 
 
 

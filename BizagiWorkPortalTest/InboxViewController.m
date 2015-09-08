@@ -25,6 +25,13 @@
 
     [self loadInbox];
     
+    self.title = @"Inbox";
+    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18],
+                                                                    NSForegroundColorAttributeName: [UIColor colorFromHexCode:@"#ffffff"]};
+    
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor colorFromHexCode:@"#e75659"]];
+
+    
     self.edgesForExtendedLayout=UIRectEdgeNone;
 }
 -(void)loadInbox{
@@ -63,7 +70,7 @@
     Process * process = [self.listInbox objectAtIndex:indexPath.row];
     
     cell.lblEmployee.text = [NSString stringWithFormat:@"Employee: %@",process.employee];
-    cell.lblDaysRequested.text=process.resquestDate;
+    cell.lblDaysRequested.text=[NSString stringWithFormat:@"Date: %@",process.resquestDate];
     cell.lblToDates.text = [NSString stringWithFormat:@"Number of Days: %@",process.days];
     
     [cell.imgEmployee  sd_setImageWithURL:[NSURL URLWithString:process.image]

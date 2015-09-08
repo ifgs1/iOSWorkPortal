@@ -45,6 +45,11 @@
     [self.btnReject setType:BButtonTypeDanger];
     [self loadUserData];
     
+    self.title = @"Employee";
+    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18],
+                                                                    NSForegroundColorAttributeName: [UIColor colorFromHexCode:@"#ffffff"]};
+    
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor colorFromHexCode:@"#e75659"]];
 }
 -(void)loadUserData{
 

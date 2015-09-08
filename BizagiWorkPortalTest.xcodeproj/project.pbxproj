@@ -29,6 +29,16 @@
 		F280CDFA1B9F42A20027FA04 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CDF91B9F42A20027FA04 /* UserProfileViewController.m */; };
 		F280CDFD1B9F43AE0027FA04 /* AcceptedRequestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CDFC1B9F43AE0027FA04 /* AcceptedRequestsViewController.m */; };
 		F280CE001B9F4B250027FA04 /* EmployeeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CDFF1B9F4B250027FA04 /* EmployeeDetailViewController.m */; };
+		F280CE021B9F57C90027FA04 /* accepted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F280CE011B9F57C90027FA04 /* accepted@2x.png */; };
+		F280CE121B9F59EE0027FA04 /* FUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CE051B9F59EE0027FA04 /* FUIButton.m */; };
+		F280CE131B9F59EE0027FA04 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F280CE061B9F59EE0027FA04 /* Lato-Black.ttf */; };
+		F280CE141B9F59EE0027FA04 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F280CE071B9F59EE0027FA04 /* Lato-Bold.ttf */; };
+		F280CE151B9F59EE0027FA04 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F280CE081B9F59EE0027FA04 /* Lato-Italic.ttf */; };
+		F280CE161B9F59EE0027FA04 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F280CE091B9F59EE0027FA04 /* Lato-Regular.ttf */; };
+		F280CE171B9F59EE0027FA04 /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CE0B1B9F59EE0027FA04 /* UIColor+FlatUI.m */; };
+		F280CE181B9F59EE0027FA04 /* UIFont+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CE0D1B9F59EE0027FA04 /* UIFont+FlatUI.m */; };
+		F280CE191B9F59EE0027FA04 /* UIImage+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CE0F1B9F59EE0027FA04 /* UIImage+FlatUI.m */; };
+		F280CE1A1B9F59EE0027FA04 /* UINavigationBar+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CE111B9F59EE0027FA04 /* UINavigationBar+FlatUI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +89,21 @@
 		F280CDFC1B9F43AE0027FA04 /* AcceptedRequestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptedRequestsViewController.m; sourceTree = "<group>"; };
 		F280CDFE1B9F4B250027FA04 /* EmployeeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeDetailViewController.h; sourceTree = "<group>"; };
 		F280CDFF1B9F4B250027FA04 /* EmployeeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeDetailViewController.m; sourceTree = "<group>"; };
+		F280CE011B9F57C90027FA04 /* accepted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "accepted@2x.png"; path = "Resources/accepted@2x.png"; sourceTree = "<group>"; };
+		F280CE041B9F59EE0027FA04 /* FUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FUIButton.h; path = SupportingClasses/Design/FUIButton.h; sourceTree = "<group>"; };
+		F280CE051B9F59EE0027FA04 /* FUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FUIButton.m; path = SupportingClasses/Design/FUIButton.m; sourceTree = "<group>"; };
+		F280CE061B9F59EE0027FA04 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Black.ttf"; path = "SupportingClasses/Design/Lato-Black.ttf"; sourceTree = "<group>"; };
+		F280CE071B9F59EE0027FA04 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bold.ttf"; path = "SupportingClasses/Design/Lato-Bold.ttf"; sourceTree = "<group>"; };
+		F280CE081B9F59EE0027FA04 /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Italic.ttf"; path = "SupportingClasses/Design/Lato-Italic.ttf"; sourceTree = "<group>"; };
+		F280CE091B9F59EE0027FA04 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Regular.ttf"; path = "SupportingClasses/Design/Lato-Regular.ttf"; sourceTree = "<group>"; };
+		F280CE0A1B9F59EE0027FA04 /* UIColor+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+FlatUI.h"; path = "SupportingClasses/Design/UIColor+FlatUI.h"; sourceTree = "<group>"; };
+		F280CE0B1B9F59EE0027FA04 /* UIColor+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+FlatUI.m"; path = "SupportingClasses/Design/UIColor+FlatUI.m"; sourceTree = "<group>"; };
+		F280CE0C1B9F59EE0027FA04 /* UIFont+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+FlatUI.h"; path = "SupportingClasses/Design/UIFont+FlatUI.h"; sourceTree = "<group>"; };
+		F280CE0D1B9F59EE0027FA04 /* UIFont+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+FlatUI.m"; path = "SupportingClasses/Design/UIFont+FlatUI.m"; sourceTree = "<group>"; };
+		F280CE0E1B9F59EE0027FA04 /* UIImage+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+FlatUI.h"; path = "SupportingClasses/Design/UIImage+FlatUI.h"; sourceTree = "<group>"; };
+		F280CE0F1B9F59EE0027FA04 /* UIImage+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+FlatUI.m"; path = "SupportingClasses/Design/UIImage+FlatUI.m"; sourceTree = "<group>"; };
+		F280CE101B9F59EE0027FA04 /* UINavigationBar+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+FlatUI.h"; path = "SupportingClasses/Design/UINavigationBar+FlatUI.h"; sourceTree = "<group>"; };
+		F280CE111B9F59EE0027FA04 /* UINavigationBar+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+FlatUI.m"; path = "SupportingClasses/Design/UINavigationBar+FlatUI.m"; sourceTree = "<group>"; };
 		FF924B1E8FDAC9BD6FA329E2 /* libPods-BizagiWorkPortalTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BizagiWorkPortalTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,6 +149,7 @@
 		1036D7421B97F9C6003926FB /* BizagiWorkPortalTest */ = {
 			isa = PBXGroup;
 			children = (
+				F280CE031B9F59E60027FA04 /* Design */,
 				F280CDF11B9F3C020027FA04 /* Connections */,
 				10A93B1E1B98065E00C791E7 /* Cells */,
 				10A93B1A1B9803F800C791E7 /* Objects */,
@@ -181,6 +207,7 @@
 				106491531B9EA34600F6C8D8 /* inbox@2x.png */,
 				106491541B9EA34600F6C8D8 /* information@2x.png */,
 				106491551B9EA34600F6C8D8 /* profile@2x.png */,
+				F280CE011B9F57C90027FA04 /* accepted@2x.png */,
 				10A93B151B97FD5200C791E7 /* office.jpg */,
 			);
 			name = Resources;
@@ -231,6 +258,27 @@
 				F280CDF51B9F3C0A0027FA04 /* Connections.m */,
 			);
 			name = Connections;
+			sourceTree = "<group>";
+		};
+		F280CE031B9F59E60027FA04 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				F280CE041B9F59EE0027FA04 /* FUIButton.h */,
+				F280CE051B9F59EE0027FA04 /* FUIButton.m */,
+				F280CE061B9F59EE0027FA04 /* Lato-Black.ttf */,
+				F280CE071B9F59EE0027FA04 /* Lato-Bold.ttf */,
+				F280CE081B9F59EE0027FA04 /* Lato-Italic.ttf */,
+				F280CE091B9F59EE0027FA04 /* Lato-Regular.ttf */,
+				F280CE0A1B9F59EE0027FA04 /* UIColor+FlatUI.h */,
+				F280CE0B1B9F59EE0027FA04 /* UIColor+FlatUI.m */,
+				F280CE0C1B9F59EE0027FA04 /* UIFont+FlatUI.h */,
+				F280CE0D1B9F59EE0027FA04 /* UIFont+FlatUI.m */,
+				F280CE0E1B9F59EE0027FA04 /* UIImage+FlatUI.h */,
+				F280CE0F1B9F59EE0027FA04 /* UIImage+FlatUI.m */,
+				F280CE101B9F59EE0027FA04 /* UINavigationBar+FlatUI.h */,
+				F280CE111B9F59EE0027FA04 /* UINavigationBar+FlatUI.m */,
+			);
+			name = Design;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,13 +363,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F280CE141B9F59EE0027FA04 /* Lato-Bold.ttf in Resources */,
 				1036D7521B97F9C6003926FB /* Main.storyboard in Resources */,
 				10A93B231B98068600C791E7 /* InboxCell.xib in Resources */,
 				10A93B161B97FD5200C791E7 /* office.jpg in Resources */,
 				1036D7571B97F9C6003926FB /* LaunchScreen.xib in Resources */,
 				106491581B9EA34600F6C8D8 /* profile@2x.png in Resources */,
+				F280CE021B9F57C90027FA04 /* accepted@2x.png in Resources */,
 				106491571B9EA34600F6C8D8 /* information@2x.png in Resources */,
 				1036D7541B97F9C6003926FB /* Images.xcassets in Resources */,
+				F280CE131B9F59EE0027FA04 /* Lato-Black.ttf in Resources */,
+				F280CE161B9F59EE0027FA04 /* Lato-Regular.ttf in Resources */,
+				F280CE151B9F59EE0027FA04 /* Lato-Italic.ttf in Resources */,
 				106491561B9EA34600F6C8D8 /* inbox@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F280CE1A1B9F59EE0027FA04 /* UINavigationBar+FlatUI.m in Sources */,
 				1036D7491B97F9C6003926FB /* AppDelegate.m in Sources */,
 				1036D74C1B97F9C6003926FB /* BizagiWorkPortalTest.xcdatamodeld in Sources */,
 				F280CDF71B9F3C0A0027FA04 /* Connections.m in Sources */,
@@ -383,8 +437,12 @@
 				F280CE001B9F4B250027FA04 /* EmployeeDetailViewController.m in Sources */,
 				10A93B1D1B98042200C791E7 /* Process.m in Sources */,
 				1036D74F1B97F9C6003926FB /* ViewController.m in Sources */,
+				F280CE171B9F59EE0027FA04 /* UIColor+FlatUI.m in Sources */,
 				1036D7461B97F9C6003926FB /* main.m in Sources */,
+				F280CE191B9F59EE0027FA04 /* UIImage+FlatUI.m in Sources */,
+				F280CE121B9F59EE0027FA04 /* FUIButton.m in Sources */,
 				10A93B211B98067A00C791E7 /* InboxCell.m in Sources */,
+				F280CE181B9F59EE0027FA04 /* UIFont+FlatUI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

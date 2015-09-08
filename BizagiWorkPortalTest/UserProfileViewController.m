@@ -22,6 +22,12 @@
     self.APIConnection = [[Connections alloc] init];
     [self loadUserProfile];
     
+    self.title = @"Profile";
+    self.navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont boldFlatFontOfSize:18],
+                                                                    NSForegroundColorAttributeName: [UIColor colorFromHexCode:@"#ffffff"]};
+    
+    [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor colorFromHexCode:@"#e75659"]];
+    
 }
 -(void)loadUserProfile{
     
