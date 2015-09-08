@@ -14,9 +14,8 @@
 
 -(void)getInbox{
     [[Client sharedInstance] GET:@"/ivan" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"The response to the login request is: %@", responseObject);
+        NSLog(@"The response to the inbox request is: %@", responseObject);
         
-        NSLog(@"%@", operation.response.allHeaderFields);
         
             [self.delegate getInboxDidFinishSuccessfully:responseObject];
             
@@ -32,6 +31,22 @@ failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     
 }];
 
+
+}
+-(void)getUserProfile{
+    [[Client sharedInstance] GET:@"/ivan2" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"The response to the userdata request is: %@", responseObject);
+        
+        [self.delegate getUserProfileDidFinishSuccessfully:responseObject];
+        
+    }
+                         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                             NSLog(@"error report %@",error);
+                             
+                             [self.delegate getUserProfileDidFinishWithFailure:@{  @"operation": operation,
+                                                                             @"error": error}];
+                             
+                         }];
 
 }
 @end

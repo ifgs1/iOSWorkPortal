@@ -26,6 +26,9 @@
 		85E73D33194C8CBED5C70062 /* libPods-BizagiWorkPortalTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF924B1E8FDAC9BD6FA329E2 /* libPods-BizagiWorkPortalTest.a */; };
 		F280CDF61B9F3C0A0027FA04 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CDF31B9F3C0A0027FA04 /* Client.m */; };
 		F280CDF71B9F3C0A0027FA04 /* Connections.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CDF51B9F3C0A0027FA04 /* Connections.m */; };
+		F280CDFA1B9F42A20027FA04 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CDF91B9F42A20027FA04 /* UserProfileViewController.m */; };
+		F280CDFD1B9F43AE0027FA04 /* AcceptedRequestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CDFC1B9F43AE0027FA04 /* AcceptedRequestsViewController.m */; };
+		F280CE001B9F4B250027FA04 /* EmployeeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F280CDFF1B9F4B250027FA04 /* EmployeeDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,12 @@
 		F280CDF31B9F3C0A0027FA04 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Client.m; path = SupportingClasses/Client.m; sourceTree = "<group>"; };
 		F280CDF41B9F3C0A0027FA04 /* Connections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connections.h; path = SupportingClasses/Connections.h; sourceTree = "<group>"; };
 		F280CDF51B9F3C0A0027FA04 /* Connections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connections.m; path = SupportingClasses/Connections.m; sourceTree = "<group>"; };
+		F280CDF81B9F42A20027FA04 /* UserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
+		F280CDF91B9F42A20027FA04 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
+		F280CDFB1B9F43AE0027FA04 /* AcceptedRequestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptedRequestsViewController.h; sourceTree = "<group>"; };
+		F280CDFC1B9F43AE0027FA04 /* AcceptedRequestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptedRequestsViewController.m; sourceTree = "<group>"; };
+		F280CDFE1B9F4B250027FA04 /* EmployeeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmployeeDetailViewController.h; sourceTree = "<group>"; };
+		F280CDFF1B9F4B250027FA04 /* EmployeeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmployeeDetailViewController.m; sourceTree = "<group>"; };
 		FF924B1E8FDAC9BD6FA329E2 /* libPods-BizagiWorkPortalTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BizagiWorkPortalTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -124,6 +133,12 @@
 				1036D74D1B97F9C6003926FB /* ViewController.h */,
 				1036D74E1B97F9C6003926FB /* ViewController.m */,
 				1036D7501B97F9C6003926FB /* Main.storyboard */,
+				F280CDFE1B9F4B250027FA04 /* EmployeeDetailViewController.h */,
+				F280CDFF1B9F4B250027FA04 /* EmployeeDetailViewController.m */,
+				F280CDFB1B9F43AE0027FA04 /* AcceptedRequestsViewController.h */,
+				F280CDFC1B9F43AE0027FA04 /* AcceptedRequestsViewController.m */,
+				F280CDF81B9F42A20027FA04 /* UserProfileViewController.h */,
+				F280CDF91B9F42A20027FA04 /* UserProfileViewController.m */,
 				10A93B171B98013A00C791E7 /* InboxViewController.h */,
 				10A93B181B98013A00C791E7 /* InboxViewController.m */,
 				1036D7531B97F9C6003926FB /* Images.xcassets */,
@@ -362,7 +377,10 @@
 				1036D74C1B97F9C6003926FB /* BizagiWorkPortalTest.xcdatamodeld in Sources */,
 				F280CDF71B9F3C0A0027FA04 /* Connections.m in Sources */,
 				F280CDF61B9F3C0A0027FA04 /* Client.m in Sources */,
+				F280CDFD1B9F43AE0027FA04 /* AcceptedRequestsViewController.m in Sources */,
 				10A93B191B98013A00C791E7 /* InboxViewController.m in Sources */,
+				F280CDFA1B9F42A20027FA04 /* UserProfileViewController.m in Sources */,
+				F280CE001B9F4B250027FA04 /* EmployeeDetailViewController.m in Sources */,
 				10A93B1D1B98042200C791E7 /* Process.m in Sources */,
 				1036D74F1B97F9C6003926FB /* ViewController.m in Sources */,
 				1036D7461B97F9C6003926FB /* main.m in Sources */,

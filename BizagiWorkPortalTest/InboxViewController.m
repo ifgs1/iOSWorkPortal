@@ -10,6 +10,7 @@
 #import "Process.h"
 #import "InboxCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "EmployeeDetailViewController.h"
 @interface InboxViewController ()
 @property (nonatomic, strong) Connections *APIConnection;
 
@@ -23,6 +24,8 @@
     self.APIConnection = [[Connections alloc] init];
 
     [self loadInbox];
+    
+    self.edgesForExtendedLayout=UIRectEdgeNone;
 }
 -(void)loadInbox{
     self.APIConnection.delegate = self;
@@ -56,7 +59,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"InboxCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
-
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     Process * process = [self.listInbox objectAtIndex:indexPath.row];
     
     cell.lblEmployee.text = [NSString stringWithFormat:@"Employee: %@",process.employee];
@@ -66,6 +69,11 @@
     [cell.imgEmployee  sd_setImageWithURL:[NSURL URLWithString:process.image]
                         placeholderImage:[UIImage imageNamed:@"placeholderimage.jpg"]];
     
+    cell.imgEmployee.layer.backgroundColor=[[UIColor clearColor] CGColor];
+    cell.imgEmployee.layer.cornerRadius=10;
+    cell.imgEmployee.layer.borderWidth=1.0;
+    cell.imgEmployee.layer.masksToBounds = YES;
+    cell.imgEmployee.layer.borderColor=[[UIColor lightGrayColor] CGColor];
     
     return cell;
 }
@@ -83,8 +91,8 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
+    Process * process = [self.listInbox objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"detail" sender:process];
 }
 -(void)getInboxDidFinishSuccessfully:(NSDictionary*)responseObject{
     
@@ -100,6 +108,7 @@
         process.process = [inbox objectForKey:@"process"];
         process.processId = [inbox objectForKey:@"processId"];
         process.days = [inbox objectForKey:@"vacationDays"];
+        process.resquestDate = [inbox objectForKey:@"requestDate"];
         [self.listInbox addObject:process];
     }
     [self.tableViewInbox reloadData];
@@ -107,6 +116,15 @@
 -(void)getInboxDidFinishWithFailure:(NSDictionary*)responseObject{
 
 
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    if([segue.identifier isEqualToString:@"detail"])
+    {
+        EmployeeDetailViewController *controller = segue.destinationViewController;
+        [controller setProcess:sender];
+        
+    }
 }
 
 @end

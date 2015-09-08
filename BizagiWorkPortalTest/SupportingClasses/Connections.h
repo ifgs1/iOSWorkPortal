@@ -19,6 +19,9 @@
 -(void)getInboxDidFinishSuccessfully:(NSDictionary*)responseObject; //  inboxViewController
 -(void)getInboxDidFinishWithFailure:(NSDictionary*)responseObject; //  inboxViewController
 
+-(void)getUserProfileDidFinishSuccessfully:(NSDictionary*)responseObject; //  UserProfileViewController
+-(void)getUserProfileDidFinishWithFailure:(NSDictionary*)responseObject; //  UserProfileViewController
+
 
 @end
 
@@ -32,6 +35,8 @@
 @property (nonatomic, strong) IBOutlet id<ConnectionsDelegate> delegate;
 
 -(void)getInbox;
+-(void)getUserProfile;
+
 
 
 @end
